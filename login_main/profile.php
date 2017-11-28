@@ -37,7 +37,7 @@ else {
           {
               echo $_SESSION['message'];
               
-              // Don't annoy the user with more messages upon page refresh
+              
               unset( $_SESSION['message'] );
           }
           

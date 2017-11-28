@@ -22,7 +22,7 @@ else { // User exists
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;
 
-        header("location: profile.php");
+        header("location: profile.php"); //Change the location to the main website, due it points to profile.php right now
     }
     else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
