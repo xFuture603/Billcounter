@@ -1,6 +1,8 @@
 .jumbotron {
     background-size: cover;
     background-position: center center;
+	margin-bottom: -100px;
+
 }
 
 .red{
@@ -12,4 +14,13 @@
 	padding: 10px 40px 60px;
 	margin: 10px 0px 60px;
 	border: 1px solid GREY;
+	margin-top: -70px;
 	}
+
+.everything_background {
+	background-color: #FAFAFA;
+}
+
+.footer {
+    background-color: #FAFAFA;
+}
