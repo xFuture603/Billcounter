@@ -8,3 +8,4 @@ Well known Bugs:
 - wrong / not the best datatype for the "Schulden" division in sql
 - Http Status (blocked:other) for contact_form.css and contact_form.js
 - crappy html code in my contact_form.html (fixed footer and whitespace above)
+- no functionalty on the contact_formular (database already exists but no code)
