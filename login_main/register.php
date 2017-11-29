@@ -13,7 +13,7 @@ $first_name = $mysqli->escape_string($_POST['firstname']);
 $last_name = $mysqli->escape_string($_POST['lastname']);
 $email = $mysqli->escape_string($_POST['email']);
 $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
-$hash = $mysqli->escape_string( md5( rand(0,1000) ) );
+$hash = $mysqli->escape_string( md5( rand(0,1000) ) ); //Gosh I need to change the md5 thingy
       
 // Check if user with that email already exists
 $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
@@ -35,7 +35,7 @@ else { // Email doesn't already exist in a database, proceed...
     if ( $mysqli->query($sql) ){
 
         $_SESSION['active'] = 0; //0 until user activates their account with verify.php
-        $_SESSION['logged_in'] = true; // So we know the user has logged in
+        $_SESSION['logged_in'] = true; // So I know the user has logged in
         $_SESSION['message'] =
                 
                  "Confirmation link has been sent to $email, please verify
