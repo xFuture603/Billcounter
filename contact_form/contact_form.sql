@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS `contact_form` (
+  `id` int(20) NOT NULL AUTO_INCREMENT COMMENT 'primary key',
   `u_name` text(255) NOT NULL COMMENT 'u_name',
   `u_email` text NOT NULL COMMENT 'u_email',
   `sub` text(100) NOT NULL COMMENT 'subj',

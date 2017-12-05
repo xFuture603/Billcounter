@@ -14,7 +14,7 @@ if (!$success) {
  
 }
  
-echo "Thank You For Contacting Us <br>";
+echo "Thank You For Contacting Me! <br>";
  
 $conn->close();
  
