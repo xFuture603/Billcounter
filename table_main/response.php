@@ -81,7 +81,7 @@
 		$sqlRec .= " LIMIT ". $start_from .",".$rp;
 		
 		
-		$qtot = mysqli_query($this->conn, $sqlTot) or die("error to fetch tot employees data");
+		$qtot = mysqli_query($this->conn, $sqlTot) or die("error to fetch dead employees data");
 		$queryRecords = mysqli_query($this->conn, $sqlRec) or die("error to fetch employees data");
 		
 		while( $row = mysqli_fetch_assoc($queryRecords) ) { 
