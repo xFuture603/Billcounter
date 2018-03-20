@@ -1,5 +1,5 @@
 --
--- Table structure for table `employee`
+-- Tabellenstruktur für die Tabelle "employee"
 --
 
 CREATE TABLE IF NOT EXISTS `employee` (
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='datatable demo table' AUTO_INCREMENT=64 ;
 
 --
--- Dumping data for table `employee`
+-- Testdaten für die Tabelle "employee"
 --
 
 INSERT INTO `employee` (`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES
