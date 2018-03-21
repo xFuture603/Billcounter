@@ -1,24 +1,25 @@
 <?php
-/* Registration process, inserts user info into the database 
+/* 
+   Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
 
-// Set session variables to be used on profile.php page
+// Setze Session Variablen, welche in der profile.php genutzt werden können.
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];
 
-// Escape all $_POST variables to protect against SQL injections
+// Gehe aus allen $_POST Variablen raus um sich gegen SQL Injections zu schützen
 $first_name = $mysqli->escape_string($_POST['firstname']);
 $last_name = $mysqli->escape_string($_POST['lastname']);
 $email = $mysqli->escape_string($_POST['email']);
 $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
-$hash = $mysqli->escape_string( md5( rand(0,1000) ) ); //Gosh I need to change the md5 thingy
+$hash = $mysqli->escape_string( sha256( rand(0,1000) ) );
       
-// Check if user with that email already exists
+// Überprüfe ob der Benutzer bereits existiert
 $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
 
-// We know user email exists if the rows returned are more than 0
+// Sobald "rows" mehr als 0 zurück gibt, existiert der Nutzer
 if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
