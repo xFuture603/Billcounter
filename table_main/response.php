@@ -47,7 +47,6 @@
 		
 	}
 	
-	
 	function getRecords($params) {
 		$rp = isset($params['rowCount']) ? $params['rowCount'] : 10;
 		

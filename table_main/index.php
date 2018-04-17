@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Schuldnertabelle</title>
+<title>Rechent</title>
 <link rel="stylesheet" href="dist/bootstrap.min.css" type="text/css" media="all">
 <link href="dist/jquery.bootgrid.css" rel="stylesheet" />
 <script src="dist/jquery-1.11.1.min.js"></script>
@@ -22,9 +22,9 @@
 				<tr>
 					<th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
 					<th data-column-id="employee_name">Name</th>
-					<th data-column-id="employee_salary">Schulden</th>
+					<th data-column-id="employee_salary">Rechnungsname  </th>
 					<th data-column-id="employee_age">Alter</th>
-					<th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
+					<th data-column-id="commands" data-formatter="commands" data-sortable="false">Befehle</th>
 				</tr>
 			</thead>
 		</table>
@@ -43,11 +43,11 @@
                 <form method="post" id="frm_add">
 				<input type="hidden" value="add" name="action" id="action">
                   <div class="form-group">
-                    <label for="name" class="control-label">Name:</label>
+                    <label for="name" class="control-label">Rechnungsname:</label>
                     <input type="text" class="form-control" id="name" name="name"/>
                   </div>
                   <div class="form-group">
-                    <label for="salary" class="control-label">Schulden:</label>
+                    <label for="salary" class="control-label">Betrag:</label>
                     <input type="text" class="form-control" id="salary" name="salary"/>
                   </div>
 				  <div class="form-group">
@@ -76,11 +76,11 @@
 				<input type="hidden" value="edit" name="action" id="action">
 				<input type="hidden" value="0" name="edit_id" id="edit_id">
                   <div class="form-group">
-                    <label for="name" class="control-label">Name:</label>
+                    <label for="name" class="control-label">Rechnungsname:</label>
                     <input type="text" class="form-control" id="edit_name" name="edit_name"/>
                   </div>
                   <div class="form-group">
-                    <label for="salary" class="control-label">Schulden:</label>
+                    <label for="salary" class="control-label">Betrag:</label>
                     <input type="text" class="form-control" id="edit_salary" name="edit_salary"/>
                   </div>
 				  <div class="form-group">

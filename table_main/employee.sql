@@ -1,7 +1,3 @@
---
--- Tabellenstruktur für die Tabelle "employee"
---
-
 CREATE TABLE IF NOT EXISTS `employee` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primary key',
   `employee_name` varchar(255) NOT NULL COMMENT 'employee name',
